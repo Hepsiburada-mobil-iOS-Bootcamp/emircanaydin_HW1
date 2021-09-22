@@ -114,11 +114,19 @@ class AlgoruthmManager: AlgorithmProtocol {
      The result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1.
      */
     func mergeArraysTest() {
-        
+        var nums1 = [1,2,3,0,0,0]
+        let nums2 = [2,5,6,0,0]
+        merge(&nums1, 3, nums2, nums2.count)
     }
     
     private func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
         
+        for num in nums2 {
+            nums1.append(num)
+        }
+        
+        nums1 = nums1.filter({$0 != 0})
+        print(nums1.sorted())
     }
     
     // MARK: - Intersection of Two Arrays
