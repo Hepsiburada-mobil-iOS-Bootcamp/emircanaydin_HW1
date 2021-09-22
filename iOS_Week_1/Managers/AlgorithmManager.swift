@@ -144,7 +144,7 @@ class AlgoruthmManager: AlgorithmProtocol {
         let missingNum = missingNumber([3,0,1])
         
         if missingNum == -1 {
-            print("no missing number")
+            print("No missing number")
             return
         }
         
