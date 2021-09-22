@@ -141,11 +141,28 @@ class AlgoruthmManager: AlgorithmProtocol {
      */
     func missingNumberTest() {
         
+        let missingNum = missingNumber([3,0,1])
+        
+        if missingNum == -1 {
+            print("no missing number")
+            return
+        }
+        
+        print("Missing number is \(missingNum)")
     }
     
-//    private func missingNumber(_ nums: [Int]) -> Int {
-//
-//    }
+    private func missingNumber(_ nums: [Int]) -> Int {
+        let maxIntInArray = nums.max() ?? 0
+        
+        for item in 0...maxIntInArray {
+            
+            if !nums.contains(item) {
+                return item
+            }
+        }
+        
+        return -1;
+    }
     
 }
 
