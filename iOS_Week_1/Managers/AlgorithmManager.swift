@@ -65,14 +65,14 @@ class AlgoruthmManager: AlgorithmProtocol {
      Output: true
      */
     func isAnagramTest() {
-        var anagram = isAnagram("anagram", "nagram")
+        let anagram = isAnagram("anagram", "nagram")
         
         if anagram {
-            print("true")
+            print("Is anagaram: true")
             return
         }
         
-        print("false")
+        print("Is anagram: false")
     }
     
     func isAnagram(_ s: String, _ t: String) -> Bool {
@@ -88,12 +88,18 @@ class AlgoruthmManager: AlgorithmProtocol {
      Output: false
      */
     func duplicateTest() {
-        
+        print("Is nums are duplicate: \(containsDuplicate([1,2,3,1]))")
     }
     
-//    func containsDuplicate(_ nums: [Int]) -> Bool {
-//            
-//    }
+    func containsDuplicate(_ nums: [Int]) -> Bool {
+        let numsSet = Set(nums)
+        
+        if numsSet.count != nums.count {
+            return true
+        }
+        
+        return false
+    }
     
     // MARK: - Merge Sorted Array
     /*
