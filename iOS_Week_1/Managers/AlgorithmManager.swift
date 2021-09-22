@@ -28,6 +28,17 @@ class AlgoruthmManager: AlgorithmProtocol {
     
     private func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
         // I solved of the question for you guys :D :D :D
+        
+        for i in 0...nums.count {
+            
+            for j in 0...nums.count {
+                
+                if target == nums[i] + nums[j] {
+                    return [i,j]
+                }
+            }
+        }
+        
         return [0, 1]
     }
     
