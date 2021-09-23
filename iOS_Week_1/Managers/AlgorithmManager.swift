@@ -28,6 +28,17 @@ class AlgoruthmManager: AlgorithmProtocol {
     
     private func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
         // I solved of the question for you guys :D :D :D
+        
+        for i in 0...nums.count {
+            
+            for j in 0...nums.count {
+                
+                if target == nums[i] + nums[j] {
+                    return [i,j]
+                }
+            }
+        }
+        
         return [0, 1]
     }
     
@@ -142,11 +153,28 @@ class AlgoruthmManager: AlgorithmProtocol {
      */
     func missingNumberTest() {
         
+        let missingNum = missingNumber([3,0,1])
+        
+        if missingNum == -1 {
+            print("No missing number")
+            return
+        }
+        
+        print("Missing number is \(missingNum)")
     }
     
-//    private func missingNumber(_ nums: [Int]) -> Int {
-//
-//    }
+    private func missingNumber(_ nums: [Int]) -> Int {
+        let maxIntInArray = nums.max() ?? 0
+        
+        for item in 0...maxIntInArray {
+            
+            if !nums.contains(item) {
+                return item
+            }
+        }
+        
+        return -1;
+    }
     
 }
 
