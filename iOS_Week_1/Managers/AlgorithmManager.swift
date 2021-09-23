@@ -65,7 +65,7 @@ class AlgoruthmManager: AlgorithmProtocol {
      Output: true
      */
     func isAnagramTest() {
-        var anagram = isAnagram("anagram", "nagram")
+        let anagram = isAnagram("anagram", "nagram")
         
         if anagram {
             print("true")
