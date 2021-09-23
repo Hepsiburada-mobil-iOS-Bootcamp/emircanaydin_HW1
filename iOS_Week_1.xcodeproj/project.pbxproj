@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90C13F9326FD2EB000B5AB71 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C13F9226FD2EB000B5AB71 /* Session.swift */; };
 		A7CF0A4126F7BEBF0049FA45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF0A4026F7BEBF0049FA45 /* AppDelegate.swift */; };
 		A7CF0A4326F7BEBF0049FA45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF0A4226F7BEBF0049FA45 /* SceneDelegate.swift */; };
 		A7CF0A4526F7BEBF0049FA45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF0A4426F7BEBF0049FA45 /* ViewController.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		90C13F9226FD2EB000B5AB71 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		A7CF0A3D26F7BEBF0049FA45 /* iOS_Week_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Week_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7CF0A4026F7BEBF0049FA45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7CF0A4226F7BEBF0049FA45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90C13F9126FD2EA300B5AB71 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				90C13F9226FD2EB000B5AB71 /* Session.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
 		A7CF0A3426F7BEBF0049FA45 = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +168,7 @@
 		A7CF0A7B26F7CDC20049FA45 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				90C13F9126FD2EA300B5AB71 /* Session */,
 				A7CF0A8026F7CECE0049FA45 /* SampleClass.swift */,
 				A7CF0A8226F7CED40049FA45 /* SampleStruct.swift */,
 				A7CF0A8426F7CFD60049FA45 /* SampleEnum.swift */,
@@ -301,6 +312,7 @@
 				A7CF0A4B26F7BEBF0049FA45 /* iOS_Week_1.xcdatamodeld in Sources */,
 				A7CF0A8326F7CED40049FA45 /* SampleStruct.swift in Sources */,
 				A7CF0A8126F7CECE0049FA45 /* SampleClass.swift in Sources */,
+				90C13F9326FD2EB000B5AB71 /* Session.swift in Sources */,
 				A7CF0A4126F7BEBF0049FA45 /* AppDelegate.swift in Sources */,
 				A7CF0A4326F7BEBF0049FA45 /* SceneDelegate.swift in Sources */,
 				A7CF0A8526F7CFD60049FA45 /* SampleEnum.swift in Sources */,

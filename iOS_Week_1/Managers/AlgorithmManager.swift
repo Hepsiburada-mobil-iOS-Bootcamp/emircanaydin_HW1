@@ -28,6 +28,17 @@ class AlgoruthmManager: AlgorithmProtocol {
     
     private func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
         // I solved of the question for you guys :D :D :D
+        
+        for i in 0...nums.count {
+            
+            for j in 0...nums.count {
+                
+                if target == nums[i] + nums[j] {
+                    return [i,j]
+                }
+            }
+        }
+        
         return [0, 1]
     }
     
@@ -65,14 +76,14 @@ class AlgoruthmManager: AlgorithmProtocol {
      Output: true
      */
     func isAnagramTest() {
-        var anagram = isAnagram("anagram", "nagram")
+        let anagram = isAnagram("anagram", "nagram")
         
         if anagram {
-            print("true")
+            print("Is anagaram: true")
             return
         }
         
-        print("false")
+        print("Is anagram: false")
     }
     
     func isAnagram(_ s: String, _ t: String) -> Bool {
@@ -88,12 +99,18 @@ class AlgoruthmManager: AlgorithmProtocol {
      Output: false
      */
     func duplicateTest() {
-        
+        print("Is nums are duplicate: \(containsDuplicate([1,2,3,1]))")
     }
     
-//    func containsDuplicate(_ nums: [Int]) -> Bool {
-//            
-//    }
+    func containsDuplicate(_ nums: [Int]) -> Bool {
+        let numsSet = Set(nums)
+        
+        if numsSet.count != nums.count {
+            return true
+        }
+        
+        return false
+    }
     
     // MARK: - Merge Sorted Array
     /*
@@ -108,11 +125,19 @@ class AlgoruthmManager: AlgorithmProtocol {
      The result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1.
      */
     func mergeArraysTest() {
-        
+        var nums1 = [1,2,3,0,0,0]
+        let nums2 = [2,5,6,0,0]
+        merge(&nums1, 3, nums2, nums2.count)
     }
     
     private func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
         
+        for num in nums2 {
+            nums1.append(num)
+        }
+        
+        nums1 = nums1.filter({$0 != 0})
+        print(nums1.sorted())
     }
     
     // MARK: - Intersection of Two Arrays
@@ -123,12 +148,13 @@ class AlgoruthmManager: AlgorithmProtocol {
      Output: [2,2]
      */
     func arrayIntersectionTest() {
-        
+        print("Intersection array = \(intersect([1,2,2,1], [2,2]))")
     }
     
-//    func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
-//
-//    }
+    func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
+        let intersection = Set(nums1).intersection(Set(nums2))
+        return Array(intersection)
+    }
     
     // MARK: - Missing Number
     /*
@@ -141,11 +167,28 @@ class AlgoruthmManager: AlgorithmProtocol {
      */
     func missingNumberTest() {
         
+        let missingNum = missingNumber([3,0,1])
+        
+        if missingNum == -1 {
+            print("No missing number")
+            return
+        }
+        
+        print("Missing number is \(missingNum)")
     }
     
-//    private func missingNumber(_ nums: [Int]) -> Int {
-//
-//    }
+    private func missingNumber(_ nums: [Int]) -> Int {
+        let maxIntInArray = nums.max() ?? 0
+        
+        for item in 0...maxIntInArray {
+            
+            if !nums.contains(item) {
+                return item
+            }
+        }
+        
+        return -1;
+    }
     
 }
 
