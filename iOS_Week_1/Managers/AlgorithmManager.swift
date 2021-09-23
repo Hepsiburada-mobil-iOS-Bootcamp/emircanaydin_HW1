@@ -65,7 +65,7 @@ class AlgoruthmManager: AlgorithmProtocol {
      Output: true
      */
     func isAnagramTest() {
-        var anagram = isAnagram("anagram", "nagram")
+        let anagram = isAnagram("anagram", "nagram")
         
         if anagram {
             print("true")
@@ -123,12 +123,13 @@ class AlgoruthmManager: AlgorithmProtocol {
      Output: [2,2]
      */
     func arrayIntersectionTest() {
-        
+        print("Intersection array = \(intersect([1,2,2,1], [2,2]))")
     }
     
-//    func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
-//
-//    }
+    func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
+        let intersection = Set(nums1).intersection(Set(nums2))
+        return Array(intersection)
+    }
     
     // MARK: - Missing Number
     /*
